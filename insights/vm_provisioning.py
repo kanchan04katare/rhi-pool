@@ -135,7 +135,7 @@ class VirtualMachine(Settings):
         while True:
             try:
                 self.ssh_client.connect(hostname=ip, username="cloud-user",
-                                        key_filename = "~/.ssh/jenkins_key")
+                                        key_filename = "/var/lib/jenkins/jenkins-key")
                 print "SSH connection established"
                 break
             except paramiko.ssh_exception.NoValidConnectionsError:
